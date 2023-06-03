@@ -21,6 +21,24 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&display=swap"
     />
+	<script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var circleImages = document.querySelectorAll('.circle-image');
+      circleImages.forEach(function(circleImage) {
+        var image = circleImage.querySelector('img');
+        image.addEventListener('load', function() {
+          var aspectRatio = image.naturalWidth / image.naturalHeight;
+          if (aspectRatio > 1) {
+            image.style.width = 'auto';
+            image.style.height = '100%';
+          } else {
+            image.style.width = '100%';
+            image.style.height = 'auto';
+          }
+        });
+      });
+    });
+  </script>
   </head>
   
   <body>
@@ -55,19 +73,14 @@
                 
                   </p>
                 </div>
+				
               </div>
               <div class="bio-title"><b class="biography">Biography</b></div>
             </div>
             <div class="avatar">
-              <img
-                class="avatar-child"
-                alt=""
-                src="./public/ellipse-1.svg"
-              /><img
-                class="image-1-icon"
-                alt=""
-                src="./public/image-1@2x.png"
-              />
+              <div class="circle-image">
+    <img src="qwer.png" alt="Square image">
+  </div>
             </div>
           </div>
           <div class="group-child"></div>
@@ -76,11 +89,7 @@
             <img class="logo-2-icon" alt="" src="./public/logo-2.svg"
           /></a>
         </div>
-        <img
-          class="image-1048-icon"
-          alt=""
-          src="./public/image-1048@2x.png"
-        /><a class="logo-12" href="linkedin.com"
+        <a class="logo-12" href="linkedin.com"
           ><img
             class="vector-icon1"
             alt=""
