@@ -7,6 +7,17 @@
   left: 822px;
   width: 625px;
 }
+.circle-image {
+      width: 200px; /* Adjust the width and height as per your requirements */
+      height: 200px;
+      border-radius: 50%; /* This will make the image circular */
+      overflow: hidden; /* This will hide any overflowing content */
+    }
+.circle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 .hi-im-lastname {
   top: 0;
   left: 0;
